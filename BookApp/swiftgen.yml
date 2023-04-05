@@ -1,0 +1,25 @@
+strings:
+  - inputs: BookApp/Resources/Localization
+    filter: .+\.strings$
+    outputs:
+      templateName: structured-swift5
+      output: BookApp/Resources/SwiftGen/Strings.swift
+
+xcassets:
+   inputs:
+     - BookApp/Resources/Assets/Colors.xcassets
+     - BookApp/Resources/Assets/Images.xcassets
+   outputs:
+     - templateName: swift5
+       params:
+         forceProvidesNamespaces: true
+         enumName: XCAsset
+       output: BookApp/Resources/SwiftGen/Assets.swift
+
+fonts:
+  inputs:
+    - BookApp/Resources/Fonts
+  outputs:
+    - templateName: swift5
+      output: BookApp/Resources/SwiftGen/Fonts.swift
+

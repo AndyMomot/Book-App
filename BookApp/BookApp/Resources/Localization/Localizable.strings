@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  BookApp
+
+  Created by Андрей on 05.04.2023.
+  
+*/
+
+// Launc Screen
+"LauncScreen.bookApp" = "Book App";
+"LauncScreen.welcomeText" = "Welcome to Book App";
