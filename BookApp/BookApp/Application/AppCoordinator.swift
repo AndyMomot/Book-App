@@ -62,6 +62,13 @@ private extension AppCoordinator {
     }
     
     func runMainFlow() {
-        print(#function)
+        let coordinator = self.factory.instantiateMainCoordinator(router: self.router)
+        coordinator.finishFlow = { [unowned self, weak coordinator] _ in
+            self.removeDependency(coordinator)
+            self.launchInstructor = LaunchInstructor.launch
+            self.start()
+        }
+        self.addDependency(coordinator)
+        coordinator.start()
     }
 }

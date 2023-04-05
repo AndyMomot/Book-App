@@ -7,7 +7,7 @@
 
 import Foundation
 
-class LaunchCoordinator: Coordinator {
+final class LaunchCoordinator: Coordinator {
     // MARK: - Child Coordinators
     var childCoordinators: [Coordinator] = []
     

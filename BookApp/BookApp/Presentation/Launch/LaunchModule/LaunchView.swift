@@ -11,9 +11,8 @@ protocol LaunchViewDelegate: AnyObject {
     func switchToMainFlow()
 }
 
-class LaunchView: UIView {
-    // MARK: - Private
-    private weak var delegate: LaunchViewDelegate?
+final class LaunchView: UIView {
+    // MARK: - Private UI Components
     private var backgroundImageView = UIImageView()
     private var heartsImageView = UIImageView()
     
@@ -24,8 +23,9 @@ class LaunchView: UIView {
     private var labelsContainer = UIView()
     
     private var progressView = UIProgressView()
-    
     private let progress = Progress(totalUnitCount: 100)
+    
+    private weak var delegate: LaunchViewDelegate?
 
     // MARK: - Init
     override init(frame: CGRect) {

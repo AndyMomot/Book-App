@@ -6,6 +6,9 @@
   
 */
 
-// Launc Screen
+// Launch Screen
 "LauncScreen.bookApp" = "Book App";
 "LauncScreen.welcomeText" = "Welcome to Book App";
+
+// Library Screen
+"LibraryScreen.libraryLabel" = "Library";

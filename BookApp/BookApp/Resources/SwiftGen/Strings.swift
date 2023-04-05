@@ -19,6 +19,10 @@ internal enum L10n {
     /// Welcome to Book App
     internal static let welcomeText = L10n.tr("Localizable", "LauncScreen.welcomeText", fallback: "Welcome to Book App")
   }
+  internal enum LibraryScreen {
+    /// Library
+    internal static let libraryLabel = L10n.tr("Localizable", "LibraryScreen.libraryLabel", fallback: "Library")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

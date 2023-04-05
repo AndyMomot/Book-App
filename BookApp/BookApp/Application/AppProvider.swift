@@ -52,4 +52,9 @@ extension AppProvider: CoordinatorFactory {
     func instantiateLaunchCoordinator(router: Router) -> LaunchCoordinator {
         return .init(router: router, factory: self, services: services)
     }
+    
+    func instantiateMainCoordinator(router: Router) -> MainCoordinator {
+        rootController.navigationBar.isHidden = true
+        return .init(router: router, factory: self, services: services)
+    }
 }

@@ -22,6 +22,4 @@ extension AppProvider: LauncViewControllerFactory {
         
         return launcViewController
     }
-    
-    
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LaunchViewController: UIViewController {
+final class LaunchViewController: UIViewController {
     
     // MARK: - Properties
     private var presenter: LaunchPresenterInput!
@@ -23,7 +23,6 @@ class LaunchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.setDelegate(delegate: self)
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {

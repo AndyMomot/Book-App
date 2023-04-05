@@ -29,6 +29,16 @@
 		771EF39729DD7B1600247BBF /* NunitoSans-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 771EF38829DD7B1600247BBF /* NunitoSans-Black.ttf */; };
 		771EF39829DD7B1600247BBF /* NunitoSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 771EF38929DD7B1600247BBF /* NunitoSans-ExtraBoldItalic.ttf */; };
 		771EF39929DD7B1600247BBF /* NunitoSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 771EF38A29DD7B1600247BBF /* NunitoSans-ExtraLightItalic.ttf */; };
+		771EF39D29DDB30300247BBF /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF39C29DDB30300247BBF /* LibraryView.swift */; };
+		771EF39F29DDB31000247BBF /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF39E29DDB31000247BBF /* LibraryViewController.swift */; };
+		771EF3A129DDB32800247BBF /* LibraryPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF3A029DDB32800247BBF /* LibraryPresenterIO.swift */; };
+		771EF3A329DDB33200247BBF /* LibraryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF3A229DDB33200247BBF /* LibraryPresenter.swift */; };
+		771EF3A529DDB35500247BBF /* LibraryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF3A429DDB35500247BBF /* LibraryFactory.swift */; };
+		771EF3A729DDB36200247BBF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF3A629DDB36200247BBF /* MainCoordinator.swift */; };
+		771EF3A929DDC2B700247BBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 771EF3A829DDC2B700247BBF /* GoogleService-Info.plist */; };
+		771EF3B029DDC5E700247BBF /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 771EF3AF29DDC5E700247BBF /* FirebaseAnalytics */; };
+		771EF3B229DDC5E700247BBF /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 771EF3B129DDC5E700247BBF /* FirebaseCrashlytics */; };
+		771EF3B529DDD70E00247BBF /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */; };
 		773AC7D129DC447B001A3939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC7D029DC447B001A3939 /* AppDelegate.swift */; };
 		773AC7D329DC447B001A3939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC7D229DC447B001A3939 /* SceneDelegate.swift */; };
 		773AC7DD29DC447D001A3939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773AC7DB29DC447D001A3939 /* LaunchScreen.storyboard */; };
@@ -74,6 +84,14 @@
 		771EF38829DD7B1600247BBF /* NunitoSans-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-Black.ttf"; sourceTree = "<group>"; };
 		771EF38929DD7B1600247BBF /* NunitoSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		771EF38A29DD7B1600247BBF /* NunitoSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NunitoSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		771EF39C29DDB30300247BBF /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		771EF39E29DDB31000247BBF /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		771EF3A029DDB32800247BBF /* LibraryPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenterIO.swift; sourceTree = "<group>"; };
+		771EF3A229DDB33200247BBF /* LibraryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPresenter.swift; sourceTree = "<group>"; };
+		771EF3A429DDB35500247BBF /* LibraryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryFactory.swift; sourceTree = "<group>"; };
+		771EF3A629DDB36200247BBF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		771EF3A829DDC2B700247BBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
 		773AC7CD29DC447B001A3939 /* BookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773AC7D029DC447B001A3939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773AC7D229DC447B001A3939 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771EF3B029DDC5E700247BBF /* FirebaseAnalytics in Frameworks */,
+				771EF3B229DDC5E700247BBF /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +184,34 @@
 				771EF34029DD6B1500247BBF /* UIView+Constraints.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		771EF39A29DDB2C300247BBF /* LibraryModule */ = {
+			isa = PBXGroup;
+			children = (
+				771EF3A229DDB33200247BBF /* LibraryPresenter.swift */,
+				771EF3A029DDB32800247BBF /* LibraryPresenterIO.swift */,
+				771EF39E29DDB31000247BBF /* LibraryViewController.swift */,
+				771EF39C29DDB30300247BBF /* LibraryView.swift */,
+			);
+			path = LibraryModule;
+			sourceTree = "<group>";
+		};
+		771EF39B29DDB2EA00247BBF /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				771EF3A429DDB35500247BBF /* LibraryFactory.swift */,
+				771EF3A629DDB36200247BBF /* MainCoordinator.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		771EF3B329DDD6DB00247BBF /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 		773AC7C429DC447B001A3939 = {
@@ -237,6 +285,7 @@
 		773AC7EA29DC467E001A3939 /* Enviroment */ = {
 			isa = PBXGroup;
 			children = (
+				771EF3A829DDC2B700247BBF /* GoogleService-Info.plist */,
 				773AC7DE29DC447D001A3939 /* Info.plist */,
 			);
 			path = Enviroment;
@@ -247,6 +296,7 @@
 			children = (
 				773AC80929DC4CE6001A3939 /* Launch */,
 				773AC80A29DC4CEC001A3939 /* Main */,
+				771EF3B329DDD6DB00247BBF /* UIComponents */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -350,6 +400,8 @@
 		773AC80A29DC4CEC001A3939 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				771EF39B29DDB2EA00247BBF /* Assembler */,
+				771EF39A29DDB2C300247BBF /* LibraryModule */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -391,6 +443,8 @@
 			);
 			name = BookApp;
 			packageProductDependencies = (
+				771EF3AF29DDC5E700247BBF /* FirebaseAnalytics */,
+				771EF3B129DDC5E700247BBF /* FirebaseCrashlytics */,
 			);
 			productName = BookApp;
 			productReference = 773AC7CD29DC447B001A3939 /* BookApp.app */;
@@ -421,6 +475,7 @@
 			);
 			mainGroup = 773AC7C429DC447B001A3939;
 			packageReferences = (
+				771EF3AE29DDC5E700247BBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 773AC7CE29DC447B001A3939 /* Products */;
 			projectDirPath = "";
@@ -446,6 +501,7 @@
 				771EF38C29DD7B1600247BBF /* NunitoSans-BoldItalic.ttf in Resources */,
 				771EF33929DD632900247BBF /* Colors.xcassets in Resources */,
 				773AC7DD29DC447D001A3939 /* LaunchScreen.storyboard in Resources */,
+				771EF3A929DDC2B700247BBF /* GoogleService-Info.plist in Resources */,
 				771EF39229DD7B1600247BBF /* NunitoSans-SemiBoldItalic.ttf in Resources */,
 				771EF39829DD7B1600247BBF /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
 				771EF39129DD7B1600247BBF /* NunitoSans-Regular.ttf in Resources */,
@@ -467,17 +523,24 @@
 			files = (
 				773AC7FA29DC4B2D001A3939 /* Factory.swift in Sources */,
 				773AC80829DC4C1D001A3939 /* Services.swift in Sources */,
+				771EF3A529DDB35500247BBF /* LibraryFactory.swift in Sources */,
 				773AC7E629DC45F9001A3939 /* AppCoordinator.swift in Sources */,
+				771EF39D29DDB30300247BBF /* LibraryView.swift in Sources */,
 				773AC81429DC4ED7001A3939 /* LaunchPresenter.swift in Sources */,
 				773AC7F929DC4B2D001A3939 /* CoordinatorFactory.swift in Sources */,
 				771EF32F29DD607500247BBF /* Strings.swift in Sources */,
 				773AC7FB29DC4B2D001A3939 /* Router.swift in Sources */,
 				773AC81A29DC4F0D001A3939 /* LaunchView.swift in Sources */,
 				771EF34829DD749500247BBF /* Fonts.swift in Sources */,
+				771EF3A329DDB33200247BBF /* LibraryPresenter.swift in Sources */,
+				771EF3A729DDB36200247BBF /* MainCoordinator.swift in Sources */,
+				771EF39F29DDB31000247BBF /* LibraryViewController.swift in Sources */,
 				771EF33D29DD63C600247BBF /* Assets.swift in Sources */,
 				771EF34129DD6B1500247BBF /* UIView+Constraints.swift in Sources */,
 				773AC81829DC4F00001A3939 /* LaunchViewController.swift in Sources */,
 				773AC7F129DC4943001A3939 /* Coordinator.swift in Sources */,
+				771EF3A129DDB32800247BBF /* LibraryPresenterIO.swift in Sources */,
+				771EF3B529DDD70E00247BBF /* BannerCollectionViewCell.swift in Sources */,
 				773AC80D29DC4D1B001A3939 /* LaunchFactory.swift in Sources */,
 				773AC7F329DC4965001A3939 /* LaunchInstructor.swift in Sources */,
 				773AC80429DC4B9D001A3939 /* Encodable.swift in Sources */,
@@ -628,6 +691,7 @@
 				DEVELOPMENT_TEAM = QTR5336WJC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookApp/Enviroment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Book App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -659,6 +723,7 @@
 				DEVELOPMENT_TEAM = QTR5336WJC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BookApp/Enviroment/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Book App";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -702,6 +767,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		771EF3AE29DDC5E700247BBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		771EF3AF29DDC5E700247BBF /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 771EF3AE29DDC5E700247BBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		771EF3B129DDC5E700247BBF /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 771EF3AE29DDC5E700247BBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 773AC7C529DC447B001A3939 /* Project object */;
 }

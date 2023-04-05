@@ -8,4 +8,4 @@
 import Foundation
 
 typealias Factory = CoordinatorFactory & ViewControllerFactory
-typealias ViewControllerFactory = LauncViewControllerFactory
+typealias ViewControllerFactory = LauncViewControllerFactory & LibraryFactory
