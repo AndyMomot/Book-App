@@ -39,7 +39,9 @@ extension MainCoordinator {
     }
     
     func getLibraryController() -> LibraryViewController {
-        let routes = LibraryPresenterRoutes()
+        let routes = LibraryPresenterRoutes { book in
+            print(#function)
+        }
         
         let libraryViewController = factory.instantiateLibraryViewController(routes: routes)
         return libraryViewController

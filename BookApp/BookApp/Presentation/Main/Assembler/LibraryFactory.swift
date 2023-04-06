@@ -19,6 +19,7 @@ extension AppProvider: LibraryFactory {
         
         libraryViewController.setPresenter(presenter: presenter)
         presenter.setupView(view: libraryViewController)
+        presenter.setupService(service: services)
         
         return libraryViewController
     }

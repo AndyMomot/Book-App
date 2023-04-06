@@ -8,5 +8,8 @@
 import Foundation
 
 final class Services {
-    
+    // MARK: - Poperties
+    lazy var booksService = BooksData()
+    lazy var bannersService = BannerData()
+    lazy var recommendationsService = RecommendationData()
 }

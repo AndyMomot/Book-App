@@ -37,6 +37,9 @@ internal enum XCAsset {
       internal static let launchHeartsBackground = ImageAsset(name: "launchHeartsBackground")
       internal static let launchRedBackground = ImageAsset(name: "launchRedBackground")
     }
+    internal enum MainFlow {
+      internal static let bannerPlaceholder = ImageAsset(name: "bannerPlaceholder")
+    }
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

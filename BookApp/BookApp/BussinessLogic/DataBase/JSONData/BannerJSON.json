@@ -1,0 +1,16 @@
+{
+    "top_banner_slides": [ {
+    "id": 0,
+    "book_id": 2,
+    "cover": "https://unsplash.it/600/300"
+    }, {
+
+    "id": 1,
+    "book_id": 3,
+    "cover": "https://unsplash.it/600/400"
+    }, {
+    "id": 2,
+    "book_id": 7,
+    "cover": "https://unsplash.it/600/500"
+    } ]
+}
