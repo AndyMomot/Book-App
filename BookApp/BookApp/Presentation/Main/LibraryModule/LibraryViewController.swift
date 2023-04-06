@@ -62,16 +62,18 @@ private extension LibraryViewController {
     }
     
     func updateBannerCellImage() {
-        bannerTimer = .scheduledTimer(withTimeInterval: 3, repeats: true, block: { [weak self] timer in
+        DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
-            self.contentView.updateBannerCellImage()
-        })
+            self.bannerTimer = .scheduledTimer(withTimeInterval: 3, repeats: true, block: { [self] timer in
+                self.contentView.updateBannerCellImage()
+            })
+        }
     }
 }
 
 // MARK: - LibraryViewDelegate
 extension LibraryViewController: LibraryViewDelegate {
-    func didTapBannerBook(_ bookId: Int) {
+    func didTapBook(_ bookId: Int) {
         if !booksData.books.isEmpty {
             guard let book = booksData.books.filter({$0.id == bookId}).first else { return }
             presenter.didTapBannerBook(book)

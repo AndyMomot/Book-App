@@ -19,6 +19,10 @@ class BannerCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        bacgrounImageView.image = nil
+    }
+    
     func updateCell(image: UIImage) {
         self.bacgrounImageView.image = image
     }

@@ -22,6 +22,10 @@ internal enum L10n {
   internal enum LibraryScreen {
     /// Library
     internal static let libraryLabel = L10n.tr("Localizable", "LibraryScreen.libraryLabel", fallback: "Library")
+    /// New Arrivals
+    internal static let newArrivalsLabel = L10n.tr("Localizable", "LibraryScreen.newArrivalsLabel", fallback: "New Arrivals")
+    /// Romance
+    internal static let romanceLabel = L10n.tr("Localizable", "LibraryScreen.romanceLabel", fallback: "Romance")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

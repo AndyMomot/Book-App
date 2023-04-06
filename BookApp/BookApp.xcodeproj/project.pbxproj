@@ -50,6 +50,7 @@
 		772A76C029DEA86400D36ED3 /* RecommendationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A76BF29DEA86400D36ED3 /* RecommendationData.swift */; };
 		772A76C329DEB29200D36ED3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 772A76C229DEB29200D36ED3 /* Kingfisher */; };
 		772A76C829DEB4CD00D36ED3 /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772A76C729DEB4CD00D36ED3 /* UIView+Image.swift */; };
+		77377C9C29DF198A00A1089D /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77377C9B29DF198A00A1089D /* BookCollectionViewCell.swift */; };
 		773AC7D129DC447B001A3939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC7D029DC447B001A3939 /* AppDelegate.swift */; };
 		773AC7D329DC447B001A3939 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC7D229DC447B001A3939 /* SceneDelegate.swift */; };
 		773AC7DD29DC447D001A3939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 773AC7DB29DC447D001A3939 /* LaunchScreen.storyboard */; };
@@ -112,6 +113,7 @@
 		772A76BC29DEA6EE00D36ED3 /* BannerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerData.swift; sourceTree = "<group>"; };
 		772A76BF29DEA86400D36ED3 /* RecommendationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationData.swift; sourceTree = "<group>"; };
 		772A76C729DEB4CD00D36ED3 /* UIView+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
+		77377C9B29DF198A00A1089D /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		773AC7CD29DC447B001A3939 /* BookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		773AC7D029DC447B001A3939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		773AC7D229DC447B001A3939 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,7 +232,7 @@
 		771EF3B329DDD6DB00247BBF /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */,
+				77377C9D29DF1A2B00A1089D /* CollectionCells */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -288,6 +290,15 @@
 				772A76BF29DEA86400D36ED3 /* RecommendationData.swift */,
 			);
 			path = RecommendationData;
+			sourceTree = "<group>";
+		};
+		77377C9D29DF1A2B00A1089D /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */,
+				77377C9B29DF198A00A1089D /* BookCollectionViewCell.swift */,
+			);
+			path = CollectionCells;
 			sourceTree = "<group>";
 		};
 		773AC7C429DC447B001A3939 = {
@@ -616,6 +627,7 @@
 				771EF34129DD6B1500247BBF /* UIView+Constraints.swift in Sources */,
 				773AC81829DC4F00001A3939 /* LaunchViewController.swift in Sources */,
 				773AC7F129DC4943001A3939 /* Coordinator.swift in Sources */,
+				77377C9C29DF198A00A1089D /* BookCollectionViewCell.swift in Sources */,
 				771EF3A129DDB32800247BBF /* LibraryPresenterIO.swift in Sources */,
 				771EF3B529DDD70E00247BBF /* BannerCollectionViewCell.swift in Sources */,
 				773AC80D29DC4D1B001A3939 /* LaunchFactory.swift in Sources */,

@@ -25,7 +25,8 @@
             
             {
             "id": 2,
-            "name": "Dune", "author": "Frank Herbert",
+            "name": "Dune",
+            "author": "Frank Herbert",
             "summary": "Set on the desert planet Arrakis, Dune is the story of the boy Paul Atreides, who would become the mysterious man known as Maud'dib. He would avenge the traitorous plot against his noble family - and would bring to fruition humankind's most ancient and unattainable dream.",
             "genre": "Fantasy",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/dune.jpg?alt=media&token=54dc04b9-665b-41de-9cf2-b3062f649296",
@@ -36,7 +37,8 @@
             
             {
             "id": 3,
-            "name": "Ready Player One", "author": "Ernest Cline",
+            "name": "Ready Player One",
+            "author": "Ernest Cline",
             "summary": "At once wildly original and stuffed with irresistible nostalgia, Ready Player One is a spectacularly genre-busting, ambitious, and charming debut - part quest novel, part love story, and part virtual space opera set in a universe where spell-slinging mages battle giant Japanese robots, entire planets are inspired by Blade Runner, and flying DeLoreans achieve light speed.",
             "genre": "Science",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/ready_player_one.jpg?alt=media&token=3c28d6d1-a949-4989-ae07-0218c44acdd6",
