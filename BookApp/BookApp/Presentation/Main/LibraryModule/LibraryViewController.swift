@@ -30,6 +30,10 @@ final class LibraryViewController: UIViewController {
         getBannersData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateBannerCellImage()
@@ -69,8 +73,8 @@ private extension LibraryViewController {
 extension LibraryViewController: LibraryViewDelegate {
     func didTapBook(_ bookId: Int) {
         if !booksData.books.isEmpty {
-            guard let book = booksData.books.filter({$0.id == bookId}).first else { return }
-            presenter.didTapBannerBook(book)
+            guard let bookId = booksData.books.firstIndex(where: {$0.id == bookId}) else { return }
+            presenter.didTapBannerBook(bookId)
         }
     }
     

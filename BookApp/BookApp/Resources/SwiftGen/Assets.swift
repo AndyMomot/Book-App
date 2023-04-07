@@ -25,9 +25,12 @@ internal typealias AssetImageTypeAlias = ImageAsset.Image
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum XCAsset {
   internal enum Colors {
+    internal static let darkGrayColor = ColorAsset(name: "DarkGrayColor")
     internal static let libraryBacground = ColorAsset(name: "LibraryBacground")
     internal static let pinkColor = ColorAsset(name: "PinkColor")
+    internal static let purpleColor = ColorAsset(name: "PurpleColor")
     internal static let redColor = ColorAsset(name: "RedColor")
+    internal static let secondaryColor = ColorAsset(name: "SecondaryColor")
   }
   internal enum Images {
     internal enum LauncFlow {
@@ -39,6 +42,7 @@ internal enum XCAsset {
     }
     internal enum MainFlow {
       internal static let bannerPlaceholder = ImageAsset(name: "bannerPlaceholder")
+      internal static let chevronLeft = ImageAsset(name: "chevron.left")
     }
   }
 }

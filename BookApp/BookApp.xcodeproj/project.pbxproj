@@ -69,6 +69,11 @@
 		773AC81629DC4EE2001A3939 /* LaunchPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81529DC4EE2001A3939 /* LaunchPresenterIO.swift */; };
 		773AC81829DC4F00001A3939 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81729DC4F00001A3939 /* LaunchViewController.swift */; };
 		773AC81A29DC4F0D001A3939 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81929DC4F0D001A3939 /* LaunchView.swift */; };
+		77C9DDB929E05151005B4135 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDB829E05151005B4135 /* RecommendedView.swift */; };
+		77C9DDBB29E0517A005B4135 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBA29E0517A005B4135 /* RecommendedViewController.swift */; };
+		77C9DDBD29E051BB005B4135 /* RecommendedPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBC29E051BB005B4135 /* RecommendedPresenterIO.swift */; };
+		77C9DDBF29E051C9005B4135 /* RecommendedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBE29E051C9005B4135 /* RecommendedPresenter.swift */; };
+		77C9DDC129E05A18005B4135 /* UIViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +139,11 @@
 		773AC81529DC4EE2001A3939 /* LaunchPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenterIO.swift; sourceTree = "<group>"; };
 		773AC81729DC4F00001A3939 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		773AC81929DC4F0D001A3939 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		77C9DDB829E05151005B4135 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
+		77C9DDBA29E0517A005B4135 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
+		77C9DDBC29E051BB005B4135 /* RecommendedPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPresenterIO.swift; sourceTree = "<group>"; };
+		77C9DDBE29E051C9005B4135 /* RecommendedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPresenter.swift; sourceTree = "<group>"; };
+		77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +215,7 @@
 			children = (
 				771EF34029DD6B1500247BBF /* UIView+Constraints.swift */,
 				772A76C729DEB4CD00D36ED3 /* UIView+Image.swift */,
+				77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -482,6 +493,7 @@
 			children = (
 				771EF39B29DDB2EA00247BBF /* Assembler */,
 				771EF39A29DDB2C300247BBF /* LibraryModule */,
+				77C9DDB729E0502D005B4135 /* RecommendetModule */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -504,6 +516,17 @@
 				773AC81929DC4F0D001A3939 /* LaunchView.swift */,
 			);
 			path = LaunchModule;
+			sourceTree = "<group>";
+		};
+		77C9DDB729E0502D005B4135 /* RecommendetModule */ = {
+			isa = PBXGroup;
+			children = (
+				77C9DDBE29E051C9005B4135 /* RecommendedPresenter.swift */,
+				77C9DDBC29E051BB005B4135 /* RecommendedPresenterIO.swift */,
+				77C9DDBA29E0517A005B4135 /* RecommendedViewController.swift */,
+				77C9DDB829E05151005B4135 /* RecommendedView.swift */,
+			);
+			path = RecommendetModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -606,6 +629,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C9DDBF29E051C9005B4135 /* RecommendedPresenter.swift in Sources */,
+				77C9DDBB29E0517A005B4135 /* RecommendedViewController.swift in Sources */,
+				77C9DDC129E05A18005B4135 /* UIViewController+Views.swift in Sources */,
 				773AC7FA29DC4B2D001A3939 /* Factory.swift in Sources */,
 				773AC80829DC4C1D001A3939 /* Services.swift in Sources */,
 				771EF3A529DDB35500247BBF /* LibraryFactory.swift in Sources */,
@@ -628,8 +654,10 @@
 				773AC81829DC4F00001A3939 /* LaunchViewController.swift in Sources */,
 				773AC7F129DC4943001A3939 /* Coordinator.swift in Sources */,
 				77377C9C29DF198A00A1089D /* BookCollectionViewCell.swift in Sources */,
+				77C9DDB929E05151005B4135 /* RecommendedView.swift in Sources */,
 				771EF3A129DDB32800247BBF /* LibraryPresenterIO.swift in Sources */,
 				771EF3B529DDD70E00247BBF /* BannerCollectionViewCell.swift in Sources */,
+				77C9DDBD29E051BB005B4135 /* RecommendedPresenterIO.swift in Sources */,
 				773AC80D29DC4D1B001A3939 /* LaunchFactory.swift in Sources */,
 				773AC7F329DC4965001A3939 /* LaunchInstructor.swift in Sources */,
 				772A76B729DEA2C800D36ED3 /* RecommendationDataModel.swift in Sources */,

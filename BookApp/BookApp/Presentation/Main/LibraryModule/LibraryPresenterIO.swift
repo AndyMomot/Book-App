@@ -10,7 +10,7 @@ import Foundation
 protocol LibraryPresenterInput: AnyObject {
     func getBooksData()
     func getBannersData()
-    func didTapBannerBook(_ book: Book)
+    func didTapBannerBook(_ bookId: Int)
 }
 
 protocol LibraryPresenterOutput: AnyObject {

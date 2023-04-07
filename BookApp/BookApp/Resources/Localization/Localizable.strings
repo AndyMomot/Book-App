@@ -15,3 +15,6 @@
 "LibraryScreen.newArrivalsLabel" = "New Arrivals";
 "LibraryScreen.romanceLabel" = "Romance";
 "LibraryScreen.comedyLabel" = "Top Romantic Comedy";
+
+// Recommended Screen
+"RecommendedScreen.summary" = "Summary";

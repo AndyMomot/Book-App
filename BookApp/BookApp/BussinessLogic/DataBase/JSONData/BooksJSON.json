@@ -60,7 +60,8 @@
             
             {
             "id": 5,
-            "name": "The Hitchhiker's Guide to the Galaxy", "author": "Douglas Adams",
+            "name": "The Hitchhiker's Guide to the Galaxy",
+            "author": "Douglas Adams",
             "summary": "Seconds before the Earth is demolished to make way for a galactic freeway, Arthur Dent is plucked off the planet by his friend Ford Prefect, a researcher for the revised edition of The Hitchhiker's Guide to the Galaxy who, for the last 15 years, has been posing as an out-of-work actor.",
             "genre": "Science",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/the_hitchhikers_guide.jpg?alt=media&token=6a8635ea-2e7e-428b-815d-5fb77fbe978f",

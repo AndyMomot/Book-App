@@ -2,7 +2,7 @@
 //  CoordinatorFactory.swift
 //  CHIReviewer
 //
-//  Created by Illia Khrypunov on 08.02.2023.
+//  Created by Андрей on 06.04.2023.
 //
 
 import Foundation

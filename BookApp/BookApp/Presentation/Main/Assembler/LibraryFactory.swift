@@ -9,6 +9,7 @@ import Foundation
 
 protocol LibraryFactory {
     func instantiateLibraryViewController(routes: LibraryPresenterRoutes) -> LibraryViewController
+    func instantiateRecommendedViewController(bookId: Int, routes: RecommendedPresenterRoutes) -> RecommendedViewController
 }
 
 // MARK: - LibraryFactory
@@ -22,5 +23,17 @@ extension AppProvider: LibraryFactory {
         presenter.setupService(service: services)
         
         return libraryViewController
+    }
+    
+    func instantiateRecommendedViewController(bookId: Int, routes: RecommendedPresenterRoutes) -> RecommendedViewController {
+        let recommendedViewController = RecommendedViewController()
+        let presenter = RecommendedPresenter(routes: routes)
+        
+        recommendedViewController.setBook(id: bookId)
+        recommendedViewController.setPresenter(presenter: presenter)
+        presenter.setupView(view: recommendedViewController)
+        presenter.setupService(service: services)
+        
+        return recommendedViewController
     }
 }

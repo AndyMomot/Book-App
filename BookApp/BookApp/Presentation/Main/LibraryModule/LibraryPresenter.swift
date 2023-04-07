@@ -8,7 +8,7 @@
 import Foundation
 
 struct LibraryPresenterRoutes {
-    var onDetails: (Book) -> Void
+    var onDetails: (Int) -> Void
 }
 
 final class LibraryPresenter {
@@ -32,8 +32,8 @@ final class LibraryPresenter {
 }
 
 extension LibraryPresenter: LibraryPresenterInput {
-    func didTapBannerBook(_ book: Book) {
-        routes.onDetails(book)
+    func didTapBannerBook(_ bookId: Int) {
+        routes.onDetails(bookId)
     }
     
     func getBooksData() {
