@@ -15,7 +15,11 @@ class BookCollectionViewCell: UICollectionViewCell {
     private var bookCoverImageView = UIImageView()
     private var bookTitleLabel = UILabel()
     private var bookId: Int? = nil
+    private let activityIndicator = UIActivityIndicatorView()
     
+    var isBookCoverImageNil: Bool {
+        bookCoverImageView.image == nil
+    }
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,6 +49,24 @@ class BookCollectionViewCell: UICollectionViewCell {
             self?.bookId = bookId
         }
     }
+    
+    func showLoading() {
+        self.activityIndicator.isHidden = false
+        activityIndicator.alpha = 1
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicator.startAnimating()
+        }
+    }
+    
+    func hideLoading() {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.activityIndicator.alpha = 0
+            self?.activityIndicator.isHidden = true
+        }
+        DispatchQueue.main.async { [weak self] in
+            self?.activityIndicator.stopAnimating()
+        }
+    }
 }
 
 // MARK: - Private functions
@@ -69,6 +91,11 @@ private extension BookCollectionViewCell {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
         bookCoverImageView.isUserInteractionEnabled = true
         bookCoverImageView.addGestureRecognizer(tapGestureRecognizer)
+        
+        bookCoverImageView.addSubview(activityIndicator, constraints: [
+            activityIndicator.centerXAnchor.constraint(equalTo: bookCoverImageView.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: bookCoverImageView.centerYAnchor)
+        ])
         
         bookTitleLabel.font = FontFamily.NunitoSans.semiBold.font(size: 16)
         bookTitleLabel.textColor = .lightGray.withAlphaComponent(0.7)

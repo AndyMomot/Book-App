@@ -20,6 +20,8 @@ internal enum L10n {
     internal static let welcomeText = L10n.tr("Localizable", "LauncScreen.welcomeText", fallback: "Welcome to Book App")
   }
   internal enum LibraryScreen {
+    /// Top Romantic Comedy
+    internal static let comedyLabel = L10n.tr("Localizable", "LibraryScreen.comedyLabel", fallback: "Top Romantic Comedy")
     /// Library
     internal static let libraryLabel = L10n.tr("Localizable", "LibraryScreen.libraryLabel", fallback: "Library")
     /// New Arrivals

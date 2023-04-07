@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 protocol LibraryViewDelegate: AnyObject {
     func updateBannerTimer()
@@ -15,7 +16,6 @@ protocol LibraryViewDelegate: AnyObject {
 final class LibraryView: UIView {
     // MARK: - Private
     private weak var delegate: LibraryViewDelegate?
-    private var bannerPageCounter = 0
     
     // MARK: - UI components
     private var scrollView = UIScrollView()
@@ -23,6 +23,7 @@ final class LibraryView: UIView {
     private let libraryLabel = UILabel()
     
     // MARK: - Banner
+    private var bannerPageCounter = 0
     private let bannerLayout = UICollectionViewFlowLayout()
     private lazy var bannerCollectionView = UICollectionView(
         frame: .zero,
@@ -47,7 +48,18 @@ final class LibraryView: UIView {
         collectionViewLayout: romanceLayout
     )
     
+    // MARK: - Comedy Books
+    private var comedyLabel = UILabel()
+    private let comedyLayout = UICollectionViewFlowLayout()
+    private lazy var comedyCollectionView = UICollectionView(
+        frame: .zero,
+        collectionViewLayout: comedyLayout
+    )
+    
+    private var bottomSpacer = UIView()
+    
     // MARK: - Data
+    private var bannersData = BannersDataModel(topBannerSlides: [])
     private var booksData = BooksDataModel(books: [])
     private var arrivesBooks: [Book] {
         let arrivesBooks = booksData.books.filter({$0.genre == Constants.BookGenre.science})
@@ -57,9 +69,12 @@ final class LibraryView: UIView {
         let romanceBooks = booksData.books.filter({$0.genre == Constants.BookGenre.romance})
         return romanceBooks
     }
+    private var comedyBooks: [Book] {
+        let comedyBooks = booksData.books.filter({$0.genre == Constants.BookGenre.fantasy})
+        return comedyBooks
+    }
     
-    private var bannersData = BannersDataModel(topBannerSlides: [])
-    private var recommendationsData = RecommendationDataModel(youWillLikeSection: [])
+    private var bannerImages = [String: UIImage]()
     
     // MARK: - Init
     override init(frame: CGRect) {
@@ -82,6 +97,7 @@ final class LibraryView: UIView {
         bannerCollectionView.reloadData()
         arrivalsCollectionView.reloadData()
         romanceCollectionView.reloadData()
+        comedyCollectionView.reloadData()
     }
     
     func updateBannerData(_ bannersData: BannersDataModel) {
@@ -90,20 +106,20 @@ final class LibraryView: UIView {
         bannerCollectionView.reloadData()
     }
     
-    func updateRecommendationsData(_ data: RecommendationDataModel) {
-        self.recommendationsData = data
+    func updateBannerCellImage() {
+        bannerPageCounter += 1
+        if bannerPageCounter >= bannersData.topBannerSlides.count {
+            bannerPageCounter = 0
+        }
+        scrollBannerCellToItem(to: bannerPageCounter, animated: true)
     }
     
-    func updateBannerCellImage() {
-        if bannerPageCounter < bannersData.topBannerSlides.count {
-            scrollBannerCellToItem(to: bannerPageCounter, animated: true)
-            pageControl.currentPage = bannerPageCounter
-            bannerPageCounter += 1
-        } else {
+    func updateTimer() {
+        if bannerPageCounter >= bannersData.topBannerSlides.count {
             bannerPageCounter = 0
-            pageControl.currentPage = bannerPageCounter
-            scrollBannerCellToItem(to: bannerPageCounter, animated: true)
         }
+        scrollBannerCellToItem(to: bannerPageCounter, animated: true)
+        bannerPageCounter += 1
     }
 }
 
@@ -123,28 +139,56 @@ private extension LibraryView {
     
     func updateBannerSlidePozition(_ scrollView: UIScrollView) {
         let point = scrollView.convert(scrollView.bounds.origin, to: bannerCollectionView)
-        let indexInt = Int(point.x / scrollView.frame.width)
         let indexDouble = Double(point.x / scrollView.frame.width)
-        bannerPageCounter = indexInt
-        pageControl.currentPage = indexInt
         
         if indexDouble > Double(bannersData.topBannerSlides.count - 1) {
+            delegate?.updateBannerTimer()
             bannerPageCounter = 0
-            pageControl.currentPage = 0
             scrollBannerCellToItem(to: bannerPageCounter, animated: true)
             delegate?.updateBannerTimer()
         }
         
         if indexDouble < 0 {
+            delegate?.updateBannerTimer()
             bannerPageCounter = bannersData.topBannerSlides.count - 1
-            pageControl.currentPage = bannerPageCounter
             scrollBannerCellToItem(to: bannerPageCounter, animated: true)
             delegate?.updateBannerTimer()
         }
     }
     
+    func updateCounter(_ collectionView: UICollectionView, _ indexPath: IndexPath) {
+        if collectionView == bannerCollectionView {
+            bannerPageCounter = indexPath.row
+            pageControl.currentPage = indexPath.row
+        }
+    }
+    
     @objc private func bannerCellPressHandler(_ sender: UIGestureRecognizer) {
         didTapVannerCell?()
+    }
+    
+    func downloadImage(imageURL: String?, withSize size: CGSize, completion: @escaping (UIImage?) -> Void) {
+        DispatchQueue.main.async {
+            guard let photo = imageURL,
+                  let url = URL(string: photo)
+            else {
+                return
+            }
+            
+            let source = ImageResource(downloadURL: url, cacheKey: photo)
+            let size = size
+            let processor = DownsamplingImageProcessor(size: size)
+            
+            let imageView = UIImageView()
+            
+            imageView.kf.setImage(
+                with: source,
+                options: [
+                    .processor(processor)
+                ]
+            )
+            completion(imageView.image)
+        }
     }
     
     func createBannerCell(
@@ -163,17 +207,27 @@ private extension LibraryView {
                 self.delegate?.didTapBook(bookId)
             }
             
-            let image = getBannerImage(at: indexPath)
-            downloadImage(
-                from: image,
-                withSize: CGSize(width: collectionView.frame.width, height: collectionView.frame.height),
-                placeholder: XCAsset.Images.MainFlow.bannerPlaceholder.image
-            ) { image in
-                guard let image = image else { return }
-                cell.updateCell(image: image)
-                collectionView.reloadItems(at: [indexPath])
-            }
+            let imageURL = getBannerImage(at: indexPath)
+            let size = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
             
+            if cell.isBackgrounImageNil {
+                cell.backgroundColor = .white.withAlphaComponent(0.5)
+                cell.showLoading()
+            }
+
+
+            if let image = bannerImages[imageURL] {
+                cell.updateCell(image: image)
+                cell.backgroundColor = XCAsset.Colors.libraryBacground.color
+                cell.hideLoading()
+                collectionView.reloadItems(at: [indexPath])
+            } else {
+                downloadImage(imageURL: imageURL, withSize: size) { [weak self] image in
+                    guard let image = image else { return }
+                    self?.bannerImages[imageURL] = image
+                    self?.bannerCollectionView.reloadData()
+                }
+            }
             return cell
         }
     
@@ -228,6 +282,32 @@ private extension LibraryView {
             
             return cell
         }
+    
+    func createComedyCell(
+        _ collectionView: UICollectionView,
+        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: Constants.CellsId.comedyCell, for: indexPath
+            ) as! BookCollectionViewCell
+            let book = comedyBooks[indexPath.row]
+            cell.updateCell(title: book.name, bookId: book.id)
+            cell.cellTapped = { [weak self] bookId in
+                guard let self = self else { return }
+                self.delegate?.didTapBook(bookId)
+            }
+            
+            let size = CGSize(width: frame.width * 0.32, height: collectionView.frame.height)
+            downloadImage(
+                from: book.coverURL,
+                withSize: size,
+                placeholder: XCAsset.Images.MainFlow.bannerPlaceholder.image) { image in
+                    guard let image = image else { return }
+                    cell.updateCell(image: image, title: book.name)
+                    collectionView.reloadItems(at: [indexPath])
+                }
+            
+            return cell
+        }
 }
 
 // MARK: - Setup UI
@@ -257,6 +337,7 @@ private extension LibraryView {
         bannerCollectionView.isPagingEnabled = true
         bannerCollectionView.backgroundColor = XCAsset.Colors.libraryBacground.color
         bannerCollectionView.decelerationRate = .fast
+        bannerCollectionView.layer.cornerRadius = 10
         bannerCollectionView.register(
             BannerCollectionViewCell.self,
             forCellWithReuseIdentifier: Constants.CellsId.bannerCell
@@ -301,6 +382,26 @@ private extension LibraryView {
             BookCollectionViewCell.self,
             forCellWithReuseIdentifier: Constants.CellsId.romanceCell
         )
+        
+        // Comedy
+        comedyLabel.text = L10n.LibraryScreen.comedyLabel
+        comedyLabel.textColor = .white
+        comedyLabel.font = FontFamily.NunitoSans.bold.font(size: 20)
+        
+        comedyLayout.scrollDirection = .horizontal
+        comedyLayout.minimumLineSpacing = 8
+        
+        comedyCollectionView.backgroundColor = XCAsset.Colors.libraryBacground.color
+        comedyCollectionView.showsHorizontalScrollIndicator = false
+        comedyCollectionView.showsHorizontalScrollIndicator = false
+        comedyCollectionView.delegate = self
+        comedyCollectionView.dataSource = self
+        comedyCollectionView.register(
+            BookCollectionViewCell.self,
+            forCellWithReuseIdentifier: Constants.CellsId.comedyCell
+        )
+        
+        bottomSpacer.backgroundColor = XCAsset.Colors.libraryBacground.color
     }
     
     func setupLayout() {
@@ -390,8 +491,35 @@ private extension LibraryView {
                 equalTo: contentView.leadingAnchor,
                 constant: Constants.sidePadding),
             romanceCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            romanceCollectionView.heightAnchor.constraint(equalToConstant: Constants.arrivalsCollectionViewHeight),
-            romanceCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            romanceCollectionView.heightAnchor.constraint(equalToConstant: Constants.arrivalsCollectionViewHeight)
+        ])
+        
+        contentView.addSubview(comedyLabel, constraints: [
+            comedyLabel.topAnchor.constraint(
+                equalTo: romanceCollectionView.bottomAnchor,
+                constant: Constants.romanceLabelTopPadding),
+            comedyLabel.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: Constants.sidePadding)
+        ])
+        
+        contentView.addSubview(comedyCollectionView, constraints: [
+            comedyCollectionView.topAnchor.constraint(
+                equalTo: comedyLabel.bottomAnchor,
+                constant: Constants.sidePadding),
+            comedyCollectionView.leadingAnchor.constraint(
+                equalTo: contentView.leadingAnchor,
+                constant: Constants.sidePadding),
+            comedyCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            comedyCollectionView.heightAnchor.constraint(equalToConstant: Constants.arrivalsCollectionViewHeight)
+        ])
+        
+        contentView.addSubview(bottomSpacer, constraints: [
+            bottomSpacer.topAnchor.constraint(equalTo: comedyCollectionView.bottomAnchor),
+            bottomSpacer.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor),
+            bottomSpacer.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
+            bottomSpacer.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            bottomSpacer.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.01)
         ])
     }
 }
@@ -400,6 +528,10 @@ private extension LibraryView {
 extension LibraryView: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         updateBannerSlidePozition(scrollView)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        updateCounter(collectionView, indexPath)
     }
 }
 // MARK: - UICollectionViewDelegateFlowLayout
@@ -422,6 +554,8 @@ extension LibraryView: UICollectionViewDataSource {
             return arrivesBooks.count
         } else if collectionView == self.romanceCollectionView {
             return romanceBooks.count
+        } else if collectionView == self.comedyCollectionView {
+            return comedyBooks.count
         } else {
             return 0
         }
@@ -439,6 +573,10 @@ extension LibraryView: UICollectionViewDataSource {
         } else if collectionView == self.romanceCollectionView {
             let cell = createRomanceCell(collectionView, cellForItemAt: indexPath)
             return cell
+            
+        } else if collectionView == comedyCollectionView {
+            let cell = createComedyCell(collectionView, cellForItemAt: indexPath)
+            return cell
         } else {
             return UICollectionViewCell()
         }
@@ -450,6 +588,7 @@ fileprivate enum Constants {
         static let bannerCell = "BannerCell"
         static let arrivalCell = "ArrivalCell"
         static let romanceCell = "RomanceCell"
+        static let comedyCell = "ComedyCell"
     }
     
     enum BookGenre {

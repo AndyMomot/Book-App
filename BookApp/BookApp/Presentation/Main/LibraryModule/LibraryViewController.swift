@@ -14,7 +14,6 @@ final class LibraryViewController: UIViewController {
     
     private var booksData = BooksDataModel(books: [])
     private var bannersData = BannersDataModel(topBannerSlides: [])
-    private var recommendationsData = RecommendationDataModel(youWillLikeSection: [])
     
     // MARK: - UI components
     private var contentView = LibraryView()
@@ -29,7 +28,6 @@ final class LibraryViewController: UIViewController {
         contentView.setDelegate(delegate: self)
         getBooksData()
         getBannersData()
-        getRecommendationsData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,10 +55,6 @@ private extension LibraryViewController {
         presenter.getBannersData()
     }
     
-    func getRecommendationsData() {
-        presenter.getRecommendationsData()
-    }
-    
     func updateBannerCellImage() {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
@@ -83,7 +77,11 @@ extension LibraryViewController: LibraryViewDelegate {
     func updateBannerTimer() {
         DispatchQueue.main.async { [weak self] in
             self?.bannerTimer.invalidate()
-            self?.updateBannerCellImage()
+            
+            guard let self = self else { return }
+            self.bannerTimer = .scheduledTimer(withTimeInterval: 3, repeats: true, block: { [self] timer in
+                self.contentView.updateTimer()
+            })
         }
     }
 }
@@ -107,24 +105,12 @@ extension LibraryViewController: LibraryPresenterOutput {
         }
     }
     
-    func didGetRecommendationsData(data: RecommendationDataModel) {
-        DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            self.recommendationsData = data
-            self.contentView.updateRecommendationsData(self.recommendationsData)
-        }
-    }
-    
     // Errors
     func errorWithGettingBannersData(error: Error) {
         print(#function)
     }
     
     func errorWithGettingBooksData(error: Error) {
-        print(#function)
-    }
-    
-    func errorWithGettingRecommendationsData(error: Error) {
         print(#function)
     }
 }

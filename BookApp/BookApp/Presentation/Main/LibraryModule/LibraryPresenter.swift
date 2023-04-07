@@ -71,22 +71,4 @@ extension LibraryPresenter: LibraryPresenterInput {
             }
         }
     }
-    
-    func getRecommendationsData() {
-        service.recommendationsService.getRecommendationData { response, error in
-            if let error = error {
-                DispatchQueue.main.async { [weak self] in
-                    self?.view.errorWithGettingRecommendationsData(error: error)
-                    return
-                }
-            }
-            
-            if let response = response {
-                DispatchQueue.main.async { [weak self] in
-                    self?.view.didGetRecommendationsData(data: response)
-                    return
-                }
-            }
-        }
-    }
 }
