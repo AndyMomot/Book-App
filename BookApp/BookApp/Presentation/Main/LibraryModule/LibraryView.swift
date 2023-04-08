@@ -347,6 +347,7 @@ private extension LibraryView {
         
         pageControl.numberOfPages = bannersData.topBannerSlides.count
         pageControl.currentPage = 0
+        pageControl.isEnabled = false
         
         // Arrivals
         newArrivalsLabel.text = L10n.LibraryScreen.newArrivalsLabel

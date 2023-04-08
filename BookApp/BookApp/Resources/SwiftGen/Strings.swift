@@ -30,8 +30,12 @@ internal enum L10n {
     internal static let romanceLabel = L10n.tr("Localizable", "LibraryScreen.romanceLabel", fallback: "Romance")
   }
   internal enum RecommendedScreen {
+    /// Read Now
+    internal static let readNow = L10n.tr("Localizable", "RecommendedScreen.readNow", fallback: "Read Now")
     /// Summary
     internal static let summary = L10n.tr("Localizable", "RecommendedScreen.summary", fallback: "Summary")
+    /// You will also like
+    internal static let youWillLike = L10n.tr("Localizable", "RecommendedScreen.youWillLike", fallback: "You will also like")
   }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

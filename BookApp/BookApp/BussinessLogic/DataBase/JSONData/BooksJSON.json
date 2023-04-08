@@ -49,7 +49,8 @@
             
             {
             "id": 4,
-            "name": "Armada: A Novel", "author": "Ernest Cline",
+            "name": "Armada: A Novel",
+            "author": "Ernest Cline",
             "summary": "he new novel from the best-selling author of Ready Player One. It's just another day of high school for Zack Lightman. He's daydreaming through another boring math class, with just one more month to go until graduation and freedom - if he can make it that long without getting suspended again. Then he glances out his classroom window and spots the flying saucer.",
             "genre": "Science",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/armada.jpg?alt=media&token=6f8bf742-f306-4fdb-bdf7-b57b9d0664ed",
@@ -72,7 +73,8 @@
             
             {
             "id": 6,
-            "name": "Divergent", "author": "Veronica Roth",
+            "name": "Divergent",
+            "author": "Veronica Roth",
             "summary": "In Beatrice Prior's dystopian Chicago, society is divided into five factions, each dedicated to the cultivation of a particular virtue - Candor (the honest), Abnegation (the selfless), Dauntless (the brave), Amity (the peaceful), and Erudite (the intelligent). On an appointed day of every year, all sixteen-year-olds must select the faction to which they will devote the rest of their lives. For Beatrice, the decision is between staying with her family and being who she really is - she can't have both. So she makes a choice that surprises everyone, including herself.",
             "genre": "Romance",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/divergent.jpg?alt=media&token=29f5e20a-107a-4025-9733-1f3112114551",
@@ -95,7 +97,8 @@
             
             {
             "id": 8,
-            "name": "Leviathan Wakes", "author": "James S. A. Corey",
+            "name": "Leviathan Wakes",
+            "author": "James S. A. Corey",
             "summary": "The first book in the landmark Expanse series. Leviathan Wakes is James S. A. Corey's first novel in the epic New York Times best-selling series The Expanse, a modern masterwork of science fiction in which humanity has colonized the solar system. Two hundred years after migrating into space, mankind is in turmoil. When a reluctant ship's captain and washed-up detective find themselves involved in the case of a missing girl, what they discover brings our solar system to the brink of civil war and exposes the greatest conspiracy in human history.",
             "genre": "Romance",
             "cover_url": "https://firebasestorage.googleapis.com/v0/b/bookapp-b1f1b.appspot.com/o/leviathan_wakes.jpg?alt=media&token=cec55caf-0eb2-4c14-8d69-fce35b49a164",

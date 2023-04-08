@@ -18,3 +18,5 @@
 
 // Recommended Screen
 "RecommendedScreen.summary" = "Summary";
+"RecommendedScreen.youWillLike" = "You will also like";
+"RecommendedScreen.readNow" = "Read Now";

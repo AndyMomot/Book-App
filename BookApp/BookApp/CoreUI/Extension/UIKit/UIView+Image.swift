@@ -11,7 +11,7 @@ import Kingfisher
 extension UIView {
     func downloadImage(
         from urlString: String?,
-        withSize size: CGSize = CGSize(width: 50, height: 50),
+        withSize size: CGSize = CGSize(width: 200, height: 200),
         placeholder: UIImage = UIImage(),
         completion: @escaping (UIImage?) -> Void) {
             

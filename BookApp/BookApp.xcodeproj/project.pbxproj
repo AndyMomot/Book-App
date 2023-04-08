@@ -69,11 +69,18 @@
 		773AC81629DC4EE2001A3939 /* LaunchPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81529DC4EE2001A3939 /* LaunchPresenterIO.swift */; };
 		773AC81829DC4F00001A3939 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81729DC4F00001A3939 /* LaunchViewController.swift */; };
 		773AC81A29DC4F0D001A3939 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773AC81929DC4F0D001A3939 /* LaunchView.swift */; };
+		779E823A29E1683200D6FD00 /* CollectionView+DequeueReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E823929E1683200D6FD00 /* CollectionView+DequeueReusableCell.swift */; };
+		779E823C29E1685300D6FD00 /* CollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E823B29E1685300D6FD00 /* CollectionView+Register.swift */; };
+		779E824129E168B800D6FD00 /* NSObject+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779E824029E168B800D6FD00 /* NSObject+Identifier.swift */; };
 		77C9DDB929E05151005B4135 /* RecommendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDB829E05151005B4135 /* RecommendedView.swift */; };
 		77C9DDBB29E0517A005B4135 /* RecommendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBA29E0517A005B4135 /* RecommendedViewController.swift */; };
 		77C9DDBD29E051BB005B4135 /* RecommendedPresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBC29E051BB005B4135 /* RecommendedPresenterIO.swift */; };
 		77C9DDBF29E051C9005B4135 /* RecommendedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDBE29E051C9005B4135 /* RecommendedPresenter.swift */; };
 		77C9DDC129E05A18005B4135 /* UIViewController+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */; };
+		77F06B2029E15DFC001F5CE0 /* ListCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F06B1F29E15DFC001F5CE0 /* ListCollectionView.swift */; };
+		77F06B2629E15E88001F5CE0 /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F06B2529E15E88001F5CE0 /* ListSection.swift */; };
+		77F06B2829E15EF7001F5CE0 /* BookPageSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F06B2729E15EF7001F5CE0 /* BookPageSection.swift */; };
+		77F06B2A29E15F82001F5CE0 /* BannerBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F06B2929E15F82001F5CE0 /* BannerBookCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,11 +146,19 @@
 		773AC81529DC4EE2001A3939 /* LaunchPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPresenterIO.swift; sourceTree = "<group>"; };
 		773AC81729DC4F00001A3939 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		773AC81929DC4F0D001A3939 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		779E823929E1683200D6FD00 /* CollectionView+DequeueReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CollectionView+DequeueReusableCell.swift"; path = "../../../../../../CollectionView+DequeueReusableCell.swift"; sourceTree = "<group>"; };
+		779E823B29E1685300D6FD00 /* CollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+Register.swift"; sourceTree = "<group>"; };
+		779E823E29E1689A00D6FD00 /* CollectionView+DequeueReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+DequeueReusableCell.swift"; sourceTree = "<group>"; };
+		779E824029E168B800D6FD00 /* NSObject+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Identifier.swift"; sourceTree = "<group>"; };
 		77C9DDB829E05151005B4135 /* RecommendedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedView.swift; sourceTree = "<group>"; };
 		77C9DDBA29E0517A005B4135 /* RecommendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewController.swift; sourceTree = "<group>"; };
 		77C9DDBC29E051BB005B4135 /* RecommendedPresenterIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPresenterIO.swift; sourceTree = "<group>"; };
 		77C9DDBE29E051C9005B4135 /* RecommendedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedPresenter.swift; sourceTree = "<group>"; };
 		77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Views.swift"; sourceTree = "<group>"; };
+		77F06B1F29E15DFC001F5CE0 /* ListCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionView.swift; sourceTree = "<group>"; };
+		77F06B2529E15E88001F5CE0 /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		77F06B2729E15EF7001F5CE0 /* BookPageSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPageSection.swift; sourceTree = "<group>"; };
+		77F06B2929E15F82001F5CE0 /* BannerBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerBookCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,9 +228,9 @@
 		771EF33F29DD6AF000247BBF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				771EF34029DD6B1500247BBF /* UIView+Constraints.swift */,
-				772A76C729DEB4CD00D36ED3 /* UIView+Image.swift */,
-				77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */,
+				779E823F29E168A100D6FD00 /* NSObject */,
+				779E823D29E1689900D6FD00 /* UIKit */,
+				779E823929E1683200D6FD00 /* CollectionView+DequeueReusableCell.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -244,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				77377C9D29DF1A2B00A1089D /* CollectionCells */,
+				77F06B1E29E15DE1001F5CE0 /* CustomeViews */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -308,6 +324,7 @@
 			children = (
 				771EF3B429DDD70E00247BBF /* BannerCollectionViewCell.swift */,
 				77377C9B29DF198A00A1089D /* BookCollectionViewCell.swift */,
+				77F06B2929E15F82001F5CE0 /* BannerBookCollectionViewCell.swift */,
 			);
 			path = CollectionCells;
 			sourceTree = "<group>";
@@ -518,6 +535,26 @@
 			path = LaunchModule;
 			sourceTree = "<group>";
 		};
+		779E823D29E1689900D6FD00 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				771EF34029DD6B1500247BBF /* UIView+Constraints.swift */,
+				772A76C729DEB4CD00D36ED3 /* UIView+Image.swift */,
+				77C9DDC029E05A18005B4135 /* UIViewController+Views.swift */,
+				779E823E29E1689A00D6FD00 /* CollectionView+DequeueReusableCell.swift */,
+				779E823B29E1685300D6FD00 /* CollectionView+Register.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		779E823F29E168A100D6FD00 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				779E824029E168B800D6FD00 /* NSObject+Identifier.swift */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
 		77C9DDB729E0502D005B4135 /* RecommendetModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +564,48 @@
 				77C9DDB829E05151005B4135 /* RecommendedView.swift */,
 			);
 			path = RecommendetModule;
+			sourceTree = "<group>";
+		};
+		77F06B1E29E15DE1001F5CE0 /* CustomeViews */ = {
+			isa = PBXGroup;
+			children = (
+				77F06B2129E15E57001F5CE0 /* ListCollectionView */,
+			);
+			path = CustomeViews;
+			sourceTree = "<group>";
+		};
+		77F06B2129E15E57001F5CE0 /* ListCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				77F06B2229E15E67001F5CE0 /* Sections */,
+				77F06B1F29E15DFC001F5CE0 /* ListCollectionView.swift */,
+			);
+			path = ListCollectionView;
+			sourceTree = "<group>";
+		};
+		77F06B2229E15E67001F5CE0 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				77F06B2429E15E79001F5CE0 /* Castom */,
+				77F06B2329E15E72001F5CE0 /* Base */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		77F06B2329E15E72001F5CE0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				77F06B2529E15E88001F5CE0 /* ListSection.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		77F06B2429E15E79001F5CE0 /* Castom */ = {
+			isa = PBXGroup;
+			children = (
+				77F06B2729E15EF7001F5CE0 /* BookPageSection.swift */,
+			);
+			path = Castom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -629,6 +708,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779E823C29E1685300D6FD00 /* CollectionView+Register.swift in Sources */,
 				77C9DDBF29E051C9005B4135 /* RecommendedPresenter.swift in Sources */,
 				77C9DDBB29E0517A005B4135 /* RecommendedViewController.swift in Sources */,
 				77C9DDC129E05A18005B4135 /* UIViewController+Views.swift in Sources */,
@@ -637,6 +717,8 @@
 				771EF3A529DDB35500247BBF /* LibraryFactory.swift in Sources */,
 				773AC7E629DC45F9001A3939 /* AppCoordinator.swift in Sources */,
 				772A76B329DE9FBB00D36ED3 /* BooksDataModel.swift in Sources */,
+				779E823A29E1683200D6FD00 /* CollectionView+DequeueReusableCell.swift in Sources */,
+				77F06B2029E15DFC001F5CE0 /* ListCollectionView.swift in Sources */,
 				771EF39D29DDB30300247BBF /* LibraryView.swift in Sources */,
 				773AC81429DC4ED7001A3939 /* LaunchPresenter.swift in Sources */,
 				773AC7F929DC4B2D001A3939 /* CoordinatorFactory.swift in Sources */,
@@ -645,6 +727,7 @@
 				773AC81A29DC4F0D001A3939 /* LaunchView.swift in Sources */,
 				771EF34829DD749500247BBF /* Fonts.swift in Sources */,
 				771EF3A329DDB33200247BBF /* LibraryPresenter.swift in Sources */,
+				77F06B2629E15E88001F5CE0 /* ListSection.swift in Sources */,
 				771EF3A729DDB36200247BBF /* MainCoordinator.swift in Sources */,
 				771EF39F29DDB31000247BBF /* LibraryViewController.swift in Sources */,
 				771EF33D29DD63C600247BBF /* Assets.swift in Sources */,
@@ -660,11 +743,14 @@
 				77C9DDBD29E051BB005B4135 /* RecommendedPresenterIO.swift in Sources */,
 				773AC80D29DC4D1B001A3939 /* LaunchFactory.swift in Sources */,
 				773AC7F329DC4965001A3939 /* LaunchInstructor.swift in Sources */,
+				77F06B2A29E15F82001F5CE0 /* BannerBookCollectionViewCell.swift in Sources */,
+				77F06B2829E15EF7001F5CE0 /* BookPageSection.swift in Sources */,
 				772A76B729DEA2C800D36ED3 /* RecommendationDataModel.swift in Sources */,
 				773AC81629DC4EE2001A3939 /* LaunchPresenterIO.swift in Sources */,
 				772A76BA29DEA49B00D36ED3 /* BooksData.swift in Sources */,
 				773AC80F29DC4D3B001A3939 /* LaunchCoordinator.swift in Sources */,
 				773AC80329DC4B9D001A3939 /* UIViewController+ControllerForPresentation.swift in Sources */,
+				779E824129E168B800D6FD00 /* NSObject+Identifier.swift in Sources */,
 				773AC7D129DC447B001A3939 /* AppDelegate.swift in Sources */,
 				773AC7D329DC447B001A3939 /* SceneDelegate.swift in Sources */,
 				772A76C829DEB4CD00D36ED3 /* UIView+Image.swift in Sources */,

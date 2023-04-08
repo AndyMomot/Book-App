@@ -111,10 +111,10 @@ extension LibraryViewController: LibraryPresenterOutput {
     
     // Errors
     func errorWithGettingBannersData(error: Error) {
-        print(#function)
+        print(error.localizedDescription)
     }
     
     func errorWithGettingBooksData(error: Error) {
-        print(#function)
+        print(error.localizedDescription)
     }
 }
